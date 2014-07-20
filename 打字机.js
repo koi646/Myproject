@@ -9,11 +9,11 @@ window.onload=(function(){
 			$ele.html('');
 			$ele.css(
 				"display",'block'
-			);
+			);//将div转换为显示
 			var timer=setInterval(function(){
 				var current = str.substr(index,1);
 				if(current=="<"){
-					index=str.indexOf('>',index)+1;
+					index=str.indexOf('>',index)+1;//跳过标签
 				}
 				else{
 					index++;
@@ -21,9 +21,9 @@ window.onload=(function(){
 				$(environment).html(str.substring(0,index)+(index & 1?'':'_'));
 				if(index>=str.length){
 					clearInterval(timer);
-					$(environment).html($(this).html().substring(0,str.length));
+					$(environment).html($(environment).html().substr(0,str.length));//取消最后末尾的“_“
 				}
-			},speed);console.log(speed);
+			},speed);
 		});
 		return this;
 	};
