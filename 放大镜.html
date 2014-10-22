@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>放大镜</title>
+	<style type="text/css">
+		.main{
+			width: 960px;
+			height: 600px;
+			margin:auto;
+			margin-top: 50px;
+			border:1px solid #eee;
+		}
+		.small{
+			width: 300px;
+			height: 300px;
+			border:1px red dashed;
+			box-shadow: 1px #ddd;
+			padding: 5px;
+			-webkit-box-sizing:border-box;
+			float: left;
+			position: relative;
+		}
+		.small img{
+			width: 290px;
+			height: 290px;
+		}
+		.big{
+			width: 500px;
+			height: 500px;
+			border:1px red dashed;
+			box-shadow: 1px #ddd;
+			float: left;
+			margin-left:10px;
+			padding: 5px;
+			overflow: hidden;
+			display: none;
+		}
+		#img2{
+			width: 500px;
+			height: 500px;
+			background-image: url('01.jpg');
+		}
+		.thing{
+			width:58px;
+			height: 58px;
+			position: absolute;
+			border:1px solid #eee;
+			display: none;
+		}
+	</style>
+	<script type="text/javascript" src="放大镜.js"></script>
+</head>
+<body>
+	<div class="main">
+		<div class="small">
+			<img id="img1" src="放大镜.jpg"/>
+			<div class="thing"></div>
+		</div>
+		<div class="big">
+			<div id='img2'></div>
+		</div>
+	</div>
+</body>
+</html>console.log(img1);
